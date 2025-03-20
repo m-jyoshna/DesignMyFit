@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        button {
+            background-color:rgb(207, 17, 204);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-title {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .result-item {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Design Now</h1>
+
+    <div class="card">
+        <form id="itemOptionsForm">
+            <div class="form-group">
+                <label for="style">Style:</label>
+                <select id="style" name="style">
+                    <option value="casual">Casual</option>
+                    <option value="formal">Formal</option>
+                    <option value="sporty">Sporty</option>
+                    <option value="bohemian">Bohemian</option>
+                    <option value="vintage">Vintage</option>
+                    <option value="edgy">Edgy</option>
+                    <option value="chic">Chic</option>
+                    <option value="classic">Classic</option>
+                    <option value="streetwear">Streetwear</option>
+                    <option value="business">Business</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pattern">Pattern:</label>
+                <select id="pattern" name="pattern">
+                    <option value="solid">Solid</option>
+                    <option value="striped">Striped</option>
+                    <option value="checked">Checked</option>
+                    <option value="polka-dot">Polka Dot</option>
+                    <option value="floral">Floral</option>
+                    <option value="geometric">Geometric</option>
+                    <option value="paisley">Paisley</option>
+                    <option value="animal-print">Animal Print</option>
+                    <option value="tie-dye">Tie-Dye</option>
+                    <option value="abstract">Abstract</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cloth">Cloth:</label>
+                <select id="cloth" name="cloth">
+                    <option value="cotton">Cotton</option>
+                    <option value="wool">Wool</option>
+                    <option value="polyester">Polyester</option>
+                    <option value="linen">Linen</option>
+                    <option value="silk">Silk</option>
+                    <option value="denim">Denim</option>
+                    <option value="rayon">Rayon</option>
+                    <option value="spandex">Spandex</option>
+                    <option value="velvet">Velvet</option>
+                    <option value="jersey">Jersey</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <select id="color" name="color">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="purple">Purple</option>
+                    <option value="orange">Orange</option>
+                    <option value="pink">Pink</option>
+                    <option value="gray">Gray</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="length">Length:</label>
+                <select id="length" name="length">
+                    <option value="short">Short</option>
+                    <option value="medium">Medium</option>
+                    <option value="long">Long</option>
+                    <option value="ankle-length">Ankle Length</option>
+                    <option value="knee-length">Knee Length</option>
+                    <option value="floor-length">Floor Length</option>
+                    <option value="crop">Crop</option>
+                    <option value="full-length">Full Length</option>
+                    <option value="3/4">3/4 Length</option>
+                    <option value="asymmetrical">Asymmetrical</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hands">Hands:</label>
+                <select id="hands" name="hands">
+                    <option value="sleeveless">Sleeveless</option>
+                    <option value="short">Short</option>
+                    <option value="long">Long</option>
+                    <option value="cap-sleeve">Cap Sleeve</option>
+                    <option value="three-quarter">Three-Quarter</option>
+                    <option value="off-shoulder">Off Shoulder</option>
+                    <option value="halter">Halter</option>
+                    <option value="spaghetti-strap">Spaghetti Strap</option>
+                    <option value="bell-sleeve">Bell Sleeve</option>
+                    <option value="puff-sleeve">Puff Sleeve</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="neck">Neck:</label>
+                <select id="neck" name="neck">
+                    <option value="crew">Crew Neck</option>
+                    <option value="v-neck">V-Neck</option>
+                    <option value="boat-neck">Boat Neck</option>
+                    <option value="turtleneck">Turtleneck</option>
+                    <option value="scoop-neck">Scoop Neck</option>
+                    <option value="off-shoulder">Off Shoulder</option>
+                    <option value="high-neck">High Neck</option>
+                    <option value="keyhole">Keyhole</option>
+                    <option value="mock-neck">Mock Neck</option>
+                    <option value="square-neck">Square Neck</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="design">Design:</label>
+                <select id="design" name="design">
+                    <option value="plain">Plain</option>
+                    <option value="embroidered">Embroidered</option>
+                    <option value="printed">Printed</option>
+                    <option value="appliqué">Appliqué</option>
+                    <option value="cut-out">Cut-Out</option>
+                    <option value="ripped">Ripped</option>
+                    <option value="distressed">Distressed</option>
+                    <option value="layered">Layered</option>
+                    <option value="fringed">Fringed</option>
+                    <option value="pleated">Pleated</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="s">Small</option>
+                    <option value="m">Medium</option>
+                    <option value="l">Large</option>
+                    <option value="xl">Extra Large</option>
+                    <option value="xxl">Double Extra Large</option>
+                    <option value="xs">Extra Small</option>
+                    <option value="3xl">Triple Extra Large</option>
+                    <option value="4xl">Quadruple Extra Large</option>
+                    <option value="5xl">Quintuple Extra Large</option>
+                    <option value="custom">Custom Size</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        function submitForm() {
+            const style = document.getElementById('style').value;
+            const pattern = document.getElementById('pattern').value;
+            const cloth = document.getElementById('cloth').value;
+            const color = document.getElementById('color').value;
+            const length = document.getElementById('length').value;
+            const hands = document.getElementById('hands').value;
+            const neck = document.getElementById('neck').value;
+            const design = document.getElementById('design').value;
+            const size = document.getElementById('size').value;
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <div class="card">
+                    <h2 class="result-title">Selected Options:</h2>
+                    <p class="result-item">Style: ${style}</p>
+                    <p class="result-item">Pattern: ${pattern}</p>
+                    <p class="result-item">Cloth: ${cloth}</p>
+                    <p class="result-item">Color: ${color}</p>
+                    <p class="result-item">Length: ${length}</p>
+                    <p class="result-item">Hands: ${hands}</p>
+                    <p class="result-item">Neck: ${neck}</p>
+                    <p class="result-item">Design: ${design}</p>
+                    <p class="result-item">Size: ${size}</p>
+                </div>
+            `;
+        }
+    </script>
+
+</body>
+</html>

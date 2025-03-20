@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize Your Hoodie</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input[type="file"], input[type="text"], button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .hoodie-preview-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .hoodie-preview {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      background-image: url('https://i.pinimg.com/736x/8a/c4/4d/8ac44dbfeea31f0fb0d140520acb5eb6.jpg'); /* Hoodie base image */
+      background-size: cover;
+      background-position: center;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .custom-text {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50px) translateY(60px);
+      font-size: 20px;
+      color: white;
+      font-weight: bold;
+      font-family: cursive;
+    }
+
+    .custom-image {
+      position: absolute;
+      top: 54%;
+      left: 45%;
+      transform: translateX(-50%);
+      max-width: 80px;
+      max-height: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Customize Your Hoodie</h1>
+
+    <label for="hoodie-text">Enter Text for Hoodie:</label>
+    <input type="text" id="hoodie-text" placeholder="Enter custom text here" />
+
+    <label for="hoodie-image">Upload an Image (Logo or Design):</label>
+    <input type="file" id="hoodie-image" accept="image/*" />
+
+    <button id="generate-hoodie">Generate Hoodie</button>
+
+    <div class="hoodie-preview-container">
+      <div class="hoodie-preview" id="hoodie-preview">
+        <div class="custom-text" id="custom-text"></div>
+        <img src="" alt="Custom Image" class="custom-image" id="custom-image" style="display:none;" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('generate-hoodie').addEventListener('click', function() {
+      const hoodieText = document.getElementById('hoodie-text').value;
+      const hoodieImage = document.getElementById('hoodie-image').files[0];
+
+      // Update the text on the hoodie
+      const customTextElement = document.getElementById('custom-text');
+      customTextElement.textContent = hoodieText ? hoodieText : 'Your Custom Text';
+
+      // Display the uploaded image on the hoodie
+      const customImageElement = document.getElementById('custom-image');
+      if (hoodieImage) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          customImageElement.src = e.target.result;
+          customImageElement.style.display = 'block';
+        };
+        reader.readAsDataURL(hoodieImage);
+      } else {
+        customImageElement.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
