@@ -1,58 +1,98 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #e0c3fc 0%, #f848f5 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-        }
-        .gradient-button {
-            background: linear-gradient(135deg, #667eea 0%, #e54df3 100%);
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Grid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 </head>
-<body>
-    <div class="card">
-        <h1 class="text-2xl font-bold text-black-700">SIGN UP NOW!</h1>
-        <p class="text-gray-600 mb-6">It's free and takes less than 30 seconds.</p>
-        <form>
-            <div class="flex space-x-4 mb-4">
-                <input type="text" placeholder="Firstname" class="w-1/2 p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500">
-                <input type="text" placeholder="Lastname" class="w-1/2 p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500">
-            </div>
-            <div class="relative mb-4">
-                <input type="email" placeholder="name123@gmail.com" class="w-full p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500">
-                <i class="fas fa-check absolute right-2 top-2 text-blue-500"></i>
-            </div>
-            <div class="relative mb-4">
-                <input type="password" placeholder="Password" class="w-full p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500">
-                <i class="fas fa-eye absolute right-2 top-2 text-gray-500"></i>
-            </div>
-            <div class="mb-4">
-                <input type="password" placeholder="Confirm Password" class="w-full p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500">
-            </div>
-            <p class="text-gray-600 text-sm mb-4">By signing up, you agree to <a href="#" class="text-blue-500">our Terms.</a></p>
-            <button type="submit" class="w-full py-2 rounded gradient-button">DONE</button>
-        </form>
+<body class="bg-white">
+  <!-- Header -->
+  <div class="flex items-center justify-between p-4 bg-gray-100">
+    <div class="flex items-center space-x-4">
+      <i class="fas fa-search text-gray-500"></i>
+      <input class="w-full p-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="What are you looking for?" type="text"/>
     </div>
+    <div class="flex items-center space-x-4">
+      <a class="text-gray-700" href="#">Login</a>
+      <i class="fas fa-user text-gray-700"></i>
+      <i class="fas fa-heart text-gray-700"></i>
+      <i class="fas fa-shopping-cart text-gray-700"></i>
+    </div>
+  </div>
+  
+  <!-- Navigation -->
+  <div class="flex justify-center space-x-8 p-4 bg-white border-b border-gray-200">
+    <a class="text-gray-700" href="#">WOMEN</a>
+    <a class="text-gray-700" href="#">KIDS</a>
+    <a class="text-gray-700" href="#">BRANDS</a>
+    <a class="text-gray-700" href="#">STYLE HUB</a>
+  </div>
+  
+  <!-- Product Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+    <!-- Product 1 -->
+    <div class="bg-white border border-gray-200 rounded-lg p-4 flex flex-col justify-between">
+      <img alt="Sports Zip-Through Hoodie" class="w-full h-79 object-cover rounded-md" src="https://i.pinimg.com/736x/8a/c4/4d/8ac44dbfeea31f0fb0d140520acb5eb6.jpg"/>
+      <h2 class="mt-4 text-gray-800 font-semibold">
+        Sports Zip-Through Hoodie
+      </h2>
+      <div class="flex items-center space-x-2 mt-2">
+        <span class="text-gray-800 font-semibold">₹1499</span>
+        <span class="line-through text-gray-500">₹2999</span>
+        <span class="text-red-600">50% OFF</span>
+      </div>
+      <div class="mt-4">
+        <button class="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-600">Shop Now</button>
+        <button class="w-full bg-black text-white py-2 rounded-md hover:bg-black mt-2"><a href="h2.html">Customize</a></button>
+      </div>
+    </div>
+    
+    <!-- Product 2 -->
+    <div class="bg-white border border-gray-200 rounded-lg p-4 flex flex-col justify-between">
+      <img alt="Oversized Cotton Hoodie" class="w-full h-64.5 object-cover rounded-md" src="https://i.pinimg.com/736x/f2/9b/8f/f29b8f783fd67fe506300d90e88d7eda.jpg"/>
+      <h2 class="mt-4 text-gray-800 font-semibold">
+        Oversized Cotton Hoodie
+      </h2>
+      <div class="flex items-center space-x-2 mt-2">
+        <span class="text-gray-800 font-semibold">₹2590</span>
+      </div>
+      <div class="mt-4">
+        <button class="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-600">Shop Now</button>
+        <button class="w-full bg-black text-white py-2 rounded-md hover:bg-black mt-2"><a href="hoodie2.html">Customize</a></button>
+      </div>
+    </div>
+    
+    <!-- Product 3 -->
+    <div class="bg-white border border-gray-200 rounded-lg p-4 flex flex-col justify-between">
+      <img alt="Oversized Sweatshirt" class="w -full h-70 object-cover rounded-md" src="https://i.pinimg.com/736x/ff/78/87/ff78874a37f31707adf94f8495fc875f.jpg"/>
+      <h2 class="mt-4 text-gray-800 font-semibold">Oversized Sweatshirt</h2>
+      <div class="flex items-center space-x-2 mt-2">
+        <span class="text-gray-800 font-semibold">₹999</span>
+        <span class="line-through text-gray-500">₹1999</span>
+        <span class="text-red-600">50% OFF</span>
+      </div>
+      <div class="mt-4">
+        <button class="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-600">Shop Now</button>
+        <button class="w-full bg-black text-white py-2 rounded-md hover:bg-black mt-2"><a href="hoodie3.html">Customize</a></button>
+      </div>
+    </div>
+    
+    <!-- Product 4 -->
+    <div class="bg-white border border-gray-200 rounded-lg p-4 flex flex-col justify-between">
+      <img alt="Waffled Zip-Through Hoodie" class="w-full h-70 object-cover rounded-md" src="https://i.pinimg.com/736x/c3/8e/f8/c38ef87856fb52802b9369e5ba3a43a8.jpg"/>
+      <h2 class="mt-4 text-gray-800 font-semibold">
+       Waffled Zip-Through Hoodie
+      </h2>
+      <div class="flex items-center space-x-2 mt-2">
+        <span class="text-gray-800 font-semibold">₹2890</span>
+      </div>
+      <div class="mt-4">
+        <button class="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-600">Shop Now</button>
+        <button class="w-full bg-black text-white py-2 rounded-md hover:bg-black mt-2"><a href="hoodie4.html">Customize</a></button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
