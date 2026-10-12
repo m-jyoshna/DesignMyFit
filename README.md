@@ -81,7 +81,7 @@ DesignMyFit/
 ## 👥 Team
 **M. Jyoshna** - Team lead  
 **K. Shivani** - Team member  
-**K. Sharath ** - Team member  
+**K. Sharath** - Team member  
 **K. Raghuveer** - Team member
 
 ## 📄 License
